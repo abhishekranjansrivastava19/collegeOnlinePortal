@@ -10,7 +10,12 @@ const cron = require("node-cron");
 const Reminder = require("./models/reminder");
 const Traffic = require("./models/traffic");
 
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:3000', // Allows requests from your frontend
+  credentials: true, // If you need to allow cookies/auth headers
+}));
+
 app.options("*", cors());
 
 // enviornment variable

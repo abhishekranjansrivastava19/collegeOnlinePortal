@@ -10,11 +10,7 @@ const cron = require("node-cron");
 const Reminder = require("./models/reminder");
 const Traffic = require("./models/traffic");
 
-// app.use(cors());
-app.use(cors({
-  origin: 'https://dpserp.com/', // Allows requests from your frontend
-  // credentials: true, // If you need to allow cookies/auth headers
-}));
+app.use(cors());
 
 app.options("*", cors());
 
